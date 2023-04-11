@@ -62,37 +62,60 @@
 // })
 
 // super
-class Hero {
-  constructor(name, hp, damage) {
-    this.name = name;
-    this.hp = hp;
-    this.damage = damage;
+// class Hero {
+//   constructor(name, hp, damage) {
+//     this.name = name;
+//     this.hp = hp;
+//     this.damage = damage;
+//   }
+// }
+
+// applyDamage(damage); {
+//   this.hp -= damage
+// }
+
+// attack(enemy); {
+//   enemy.applyDamage(this.damage)
+// } 
+
+// class RangeHero extends Hero {
+//   constructor(name, damage, hp, range) {
+//     super(name, damage, hp)
+//     this.range = range
+//   }
+
+//   attack(enemy) {
+//     super.attack(enemy)
+//     this.hp += this.damage
+//   }
+// }
+
+// const heroAAA = new RangeHero('A', 500, 20)
+// const heroBBB = new Hero('B', 1000, 11)
+// console.log({heroAAA, heroBBB});
+
+// heroAAA.attack(heroBBB)
+// console.log({heroAAA, heroBBB});
+
+class Foo {
+  static someMethod() {
+    console.log('someMethod...');
+  }
+
+  anotherMethod() {
+    console.log('another method...');
   }
 }
+Foo.someMethod()
 
-applyDamage(damage) {
-  this.hp -= damage
+function foo() {
+
 }
 
-attack(enemy) {
-  enemy.applyDamage(this.damage)
-} 
+Foo.prototype.anotherMethod = function() {
 
-class RangeHero extends Hero {
-  constructor(name, damage, hp, range) {
-    super(name, damage, hp)
-    this.range = range
-  }
-
-  attack(enemy) {
-    super.attack(enemy)
-    this.hp += this.damage
-  }
 }
 
-const heroAAA = new RangeHero('A', 500, 20)
-const heroBBB = new Hero('B', 1000, 11)
-console.log({heroAAA, heroBBB});
-
-heroAAA.attack(heroBBB)
-console.log({heroAAA, heroBBB});
+Foo.someMethod = function() {
+  
+}
