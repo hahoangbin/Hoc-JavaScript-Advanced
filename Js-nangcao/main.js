@@ -1,19 +1,20 @@
 
-function Mouse(name) {
-  this.name = name;
-}
+// function Mouse(name) {
+//   this.name = name;
+// }
 
-Mouse.prototype.run = function() {
-  console.log(`${this.name} is running}`);
-}
+// Mouse.prototype.run = function() {
+//   console.log(`${this.name} is running}`);
+// }
 
-const mickey = new Mouse('Mickey');
-mickey.run()
-
-const jerry = {
-  name: 'Jerry',
+class Mouse {
+  constructor(name) {
+    this.name = name;
+  }
   run() {
-    console.log(`${this.name} is running}`);
+  console.log(`${this.name} is running}`);
   }
 }
-jerry.run()
+
+const mouse = new Mouse('Mickey')
+mouse.run()
