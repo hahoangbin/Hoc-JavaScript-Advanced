@@ -121,20 +121,30 @@
 // }
 
 // Rest 
-function rest(e, ...rest) {
-  console.log(e);
-  console.log(...rest);
-  console.log(arguments);
-}
-rest(2, 3, 6, 45,1, 44)
+// function rest(e, ...rest) {
+//   console.log(e);
+//   console.log(...rest);
+//   console.log(arguments);
+// }
+// rest(2, 3, 6, 45,1, 44)
 
 
-function sum(...nums) {
-  return nums.reduce((a, b) => a + b)
-}
-sum(1,2 ,3, 4, 5)
+// function sum(...nums) {
+//   return nums.reduce((a, b) => a + b)
+// }
+// sum(1,2 ,3, 4, 5)
 
-function concat(separator, ...strings) {
- return strings.join(separator)
+// function concat(separator, ...strings) {
+//  return strings.join(separator)
+// }
+// concat('.',  'a', 'b', 'c')
+
+//Spread
+const a = [1, 2, 3, 4, 5]
+const b = [1, ...a, 6]
+console.log(b);
+
+function sum(...numbers) {
+  console.log(numbers);
 }
-concat('.',  'a', 'b', 'c')
+sum(...a)
