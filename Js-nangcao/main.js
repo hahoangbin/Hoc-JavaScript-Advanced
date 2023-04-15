@@ -97,25 +97,44 @@
 // heroAAA.attack(heroBBB)
 // console.log({heroAAA, heroBBB});
 
-class Foo {
-  static someMethod() {
-    console.log('someMethod...');
-  }
+// class Foo {
+//   static someMethod() {
+//     console.log('someMethod...');
+//   }
 
-  anotherMethod() {
-    console.log('another method...');
-  }
-}
-Foo.someMethod()
+//   anotherMethod() {
+//     console.log('another method...');
+//   }
+// }
+// Foo.someMethod()
 
-function foo() {
+// function foo() {
 
-}
+// }
 
-Foo.prototype.anotherMethod = function() {
+// Foo.prototype.anotherMethod = function() {
 
-}
+// }
 
-Foo.someMethod = function() {
+// Foo.someMethod = function() {
   
+// }
+
+// Rest 
+function rest(e, ...rest) {
+  console.log(e);
+  console.log(...rest);
+  console.log(arguments);
 }
+rest(2, 3, 6, 45,1, 44)
+
+
+function sum(...nums) {
+  return nums.reduce((a, b) => a + b)
+}
+sum(1,2 ,3, 4, 5)
+
+function concat(separator, ...strings) {
+ return strings.join(separator)
+}
+concat('.',  'a', 'b', 'c')
