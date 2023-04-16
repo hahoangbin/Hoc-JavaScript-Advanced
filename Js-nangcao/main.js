@@ -16,19 +16,37 @@
 // obj3.a = 2
 // console.log(obj2);
 
-const obj1 = {
-  a: 1,
-  b: 2,
-  c: 3,
-  d: {
-    e: 10
+// const obj1 = {
+//   a: 1,
+//   b: 2,
+//   c: 3,
+//   d: {
+//     e: 10
+//   }
+// }
+
+// let obj2 = {
+//   ...obj1,
+//   z: 22
+// }
+// obj2.d.e = 11
+
+// console.log(obj1, obj2);
+
+function debug(name) {
+  return function(str) {
+    console.log(`[${name}] ${str}`);
   }
 }
 
-let obj2 = {
-  ...obj1,
-  z: 22
-}
-obj2.d.e = 11
+const log = debug('Mouse')
+log('Error happened')
 
-console.log(obj1, obj2);
+function waitAndRun(ms, func)  {
+  setTimeout(func, ms);
+}
+
+function run() {
+  console.log('run function');
+}
+waitAndRun(3000, run)
