@@ -33,20 +33,36 @@
 
 // console.log(obj1, obj2);
 
-function debug(name) {
-  return function(str) {
-    console.log(`[${name}] ${str}`);
-  }
-}
+// function debug(name) {
+//   return function(str) {
+//     console.log(`[${name}] ${str}`);
+//   }
+// }
 
-const log = debug('Mouse')
-log('Error happened')
+// const log = debug('Mouse')
+// log('Error happened')
 
-function waitAndRun(ms, func)  {
-  setTimeout(func, ms);
-}
+// function waitAndRun(ms, func)  {
+//   setTimeout(func, ms);
+// }
 
-function run() {
-  console.log('run function');
+// function run() {
+//   console.log('run function');
+// }
+// waitAndRun(3000, run)
+
+// destructuring
+// const arr = [10, 20, 30, 40, 50]
+// const [a, b, c, d, e] = arr
+
+const arr = [10, 20, 30, 40, 50]
+const [a, , ,b] = arr
+console.log(b);
+
+const obj = {
+  a: 10,
+  b: 20,
+  c: 30
 }
-waitAndRun(3000, run)
+const {a: x, b: y, c: z} = obj
+console.log(x, y, z);
