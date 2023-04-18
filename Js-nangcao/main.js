@@ -55,9 +55,11 @@
 // const arr = [10, 20, 30, 40, 50]
 // const [a, b, c, d, e] = arr
 
-document.addEventListener("mousemove", function (e) {
+document.addEventListener("click", function (e) {
   let body = document.querySelector("body");
+  console.log(body)
   let heart = document.createElement("span");
+  console.log(heart);
   let x = e.offsetX;
   let y = e.offsetY;
   heart.style.left = x + "px";
