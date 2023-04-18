@@ -55,14 +55,24 @@
 // const arr = [10, 20, 30, 40, 50]
 // const [a, b, c, d, e] = arr
 
-const arr = [10, 20, 30, 40, 50]
-const [a, , ,b] = arr
-console.log(b);
+document.addEventListener("mousemove", function (e) {
+  let body = document.querySelector("body");
+  let heart = document.createElement("span");
+  let x = e.offsetX;
+  let y = e.offsetY;
+  heart.style.left = x + "px";
+  heart.style.top = y + "px";
 
-const obj = {
-  a: 10,
-  b: 20,
-  c: 30
-}
-const {a: x, b: y, c: z} = obj
-console.log(x, y, z);
+  let size = Math.random() * 80;
+  heart.style.width = 20 + size + "px";
+  heart.style.height = 20 + size + "px";
+
+  let transformValue = Math.random() * 360;
+  heart.style.transform = "rotate(" + transformValue + "deg)";
+
+  body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 1000);
+});
